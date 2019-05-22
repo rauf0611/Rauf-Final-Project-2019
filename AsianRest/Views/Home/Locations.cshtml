@@ -1,0 +1,49 @@
+﻿@using AsianRest.Models
+@{
+    ViewBag.Title = "Locations";
+    AsianRestEntities db = new AsianRestEntities();
+    var locations = db.Locations.ToList();
+}
+
+<!-- Locations starts -->
+<section class="locations" style="margin-top:100px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="http://monde.elitelayers.com/html/images/resource/map-image.png" alt="">
+            </div>
+
+            @foreach (var item in locations)
+            {
+                <div class="col-lg-4 col-md-6 text-center mt-5">
+                    <div>
+                        <div class="col-12">
+                            <h1 style="    position: relative;color: #232323;font-size: 42px;font-weight: 700;letter-spacing: 1px;margin-bottom: 20px;text-transform: uppercase">
+                                @item.LocCity
+                            </h1>
+                        </div>
+                        <div class="col-12">
+                            <p style="position: relative;color: #616060;font-size: 14px;line-height: 1.9em;margin-bottom: 25px;">
+                                @item.LocAddres
+                                <br> @item.LocCity
+                                <br>@item.LocPhone
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <h4 style="position: relative;color: #232323;font-size: 14px;line-height: 1.9em;margin-bottom: 25px; font-weight: 700;">
+                                @item.LocWorkHours
+                            </h4>
+                        </div>
+                        <div class="col-12">
+                            <button>reservation</button>
+                        </div>
+                    </div>
+                </div>
+
+            }
+
+        </div>
+    </div>
+</section>
+
+<!--Locations ends -->

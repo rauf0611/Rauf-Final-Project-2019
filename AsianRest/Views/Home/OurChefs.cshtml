@@ -1,0 +1,141 @@
+﻿@using AsianRest.Models
+@{
+    ViewBag.Title = "Our Chefs";
+    AsianRestEntities db = new AsianRestEntities();
+    var chefs = db.Chefs.ToList();
+}
+
+<section class="chef mt-5" style="">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 d-flex align-items-center">
+                <div class="container ">
+                    <div class="row text-center">
+                        <div class="col-12">
+                            <h1 style="    color: #232323;font-size: 32px;font-weight: 700;letter-spacing: 1px;margin-bottom: 5px;z-index: 11;text-transform: uppercase;">
+                                THOMAS ANDERSON
+                            </h1>
+                            <p style="    position: relative;color: #232323;font-size: 16px;font-weight: 400;margin-bottom: 35px;z-index: 11;text-transform: capitalize;">
+                                Executif Chef
+                            </p>
+                        </div>
+                        <div class="col-12">
+                            <p style="position: relative;color: #616060;font-size: 15px;line-height: 1.7em;margin-bottom: 40px;z-index: 11;">
+                                Unique experience for the Holidays at Monde. Proin nibhel velit auctor aliquet. Aenean sollicit
+                                udine oremuisal biben dum auctor, nisi elit consequat ipsum, nec sagittis am sem nibhad
+                                elit. Duis sed odio sit amet nibvupususa amet uris. Morbi accumsan ipsum vitamectellus
+                                bodio tincwa idunt auctor a ornare odio.
+                            </p>
+                        </div>
+                        <div class="col-12 mb-5">
+                            <a href="" style="    position: relative;color: #8b755a;font-size: 12px;font-weight: 700;letter-spacing: 1px;padding-bottom: 1px;display: inline-block;text-transform: uppercase;border-bottom: 2px solid #8b755a;">CREATIONS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="col-12 chef-image">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Carousel starts -->
+<section class="quote-carousel">
+    <div class="container">
+        <div class="row" style="margin-top:100px;">
+            <div class="col-lg-8 mx-auto text-center">
+
+                <div class="owl-carousel">
+                    <div>
+                        <p class="d-block w-100" style="position: relative;color: #232323;font-size: 20px;line-height: 1.8em;margin-bottom: 30px;font-family: 'Conv_georgia';">
+                            “An experience at the heart of the New York, that give you all
+                            <br> the magic that you can imagin. Curab euismod elit ipsum, eu
+                            <br> pellen tesque turpis commodo sit amet.
+                        </p>
+                        <p class="mt-5" style="font-size:15px;font-weight:bold;">Kaka Leite</p>
+                    </div>
+                    <div>
+                        <p class="d-block w-100" style="position: relative;color: #232323;font-size: 20px;line-height: 1.8em;margin-bottom: 30px;font-family: 'Conv_georgia';">
+                            “An experience at the heart of the New York, that give you all
+                            <br> the magic that you can imagin. Curab euismod elit ipsum, eu
+                            <br> pellen tesque turpis commodo sit amet.
+                        </p>
+                        <p class="mt-5" style="font-size:15px;font-weight:bold;">Isco Alarcon</p>
+
+                    </div>
+                    <div>
+                        <p class="d-block w-100" style="position: relative;color: #232323;font-size: 20px;line-height: 1.8em;margin-bottom: 30px;font-family: 'Conv_georgia';">
+                            “An experience at the heart of the New York, that give you all
+                            <br> the magic that you can imagin. Curab euismod elit ipsum, eu
+                            <br> pellen tesque turpis commodo sit amet.
+                        </p>
+                        <p class="mt-5" style="font-size:15px;font-weight:bold;">Andreas Iniesta</p>
+
+                    </div>
+                    <div>
+                        <p class="d-block w-100" style="position: relative;color: #232323;font-size: 20px;line-height: 1.8em;margin-bottom: 30px;font-family: 'Conv_georgia';">
+                            “An experience at the heart of the New York, that give you all
+                            <br> the magic that you can imagin. Curab euismod elit ipsum, eu
+                            <br> pellen tesque turpis commodo sit amet.
+                        </p>
+                        <p class="mt-5" style="font-size:15px;font-weight:bold;">Thiago Alcantara</p>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- Carousel ends -->
+<!-- Chef Starts -->
+<section class="master-chef" style="margin-top:70px;margin-bottom:270px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 background">
+                @foreach (var item in chefs)
+                {
+                    <div class="row bg-light d-flex align-items-center" style="margin:70px 60px;">
+                        <div class="col-lg-6 ">
+                            <div class="col-12 text-center mt-4">
+                                <a href="">
+                                    <h3 style="font-size: 18px;font-weight: 700;letter-spacing: 1px;text-transform: up;    color: #8b755a;">
+                                      @item.FullName
+                                    </h3>
+                                </a>
+                                <p class="mt-1"> @item.Position</p>
+                            </div>
+                            <div class="col-12 text-center">
+                                <p style=" padding:0px 25px;font-weight:bold;   color: #616060;font-size: 14px;font-style: italic;margin-top: 15px;font-family: 'Conv_georgia';color: black;">
+                                 @item.Info
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 ">
+                            <img src="@item.Profilimg" alt="">
+                        </div>
+
+
+                    </div>
+
+                }
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<!-- Chef Ends -->
+

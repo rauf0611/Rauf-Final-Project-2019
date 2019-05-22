@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<div id="register">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12 col-md-10 mx-auto mt-5 mb-5">
+                @if (TempData["validationError"] != null)
+                {
+                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Something wrong!</strong>&ensp; @TempData["validationError"]
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                }
+                <form method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail12">Your Full Name</label>
+                        <input name="FullName" maxlength="30" minlength="3" required type="text" class="form-control" id="exampleInputEmail12" aria-describedby="emailHelp" placeholder="Enter You Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Your Email address</label>
+                        <input name="Email" required type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Your Password</label>
+                        <input name="UserPassword" minlength="4" required type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword2">Confirm Your Password</label>
+                        <input name="conUserPassword" minlength="4" required type="password" class="form-control" id="exampleInputPassword2" placeholder="Confirm Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Register</button>
+                    <label class="form-check-label" for="span">or</label>
+                    <span><a style="color:blue;" class="ml-1" href="/home/login">Allready Registered ?</a></span>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,51 @@
+﻿@model AsianRest.Models.Location
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Location</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LocCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocAddres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocAddres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocWorkHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocWorkHours)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

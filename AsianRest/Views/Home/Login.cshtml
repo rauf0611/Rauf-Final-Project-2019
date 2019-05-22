@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<div id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12 col-md-10 mx-auto mt-5 mb-5">
+                @if(TempData["success"] != null){
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong>Well Done!</strong>&ensp; You registered successfully!!!
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                }
+                @if (TempData["logError"] != null)
+                {
+                   <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>Something wrong!</strong>&ensp; @TempData["logError"]
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                }
+                <form method="post">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input required name="email" type="email" class="form-control" id="exampleInputEmail1"
+                               aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">
+                            We'll never share your email with anyone
+                            else.
+                        </small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input required name="password" type="password" class="form-control" id="exampleInputPassword1"
+                               placeholder="Password">
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Login</button>
+                    <label class="form-check-label" for="span">or</label>
+                    <span><a style="color:blue;" class="ml-1" href="/home/register">Click to Register</a></span>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+

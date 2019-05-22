@@ -1,0 +1,50 @@
+﻿@using AsianRest.Models
+@{
+    ViewBag.Title = "Events";
+    AsianRestEntities db = new AsianRestEntities();
+    var events = db.Events.ToList();
+
+}
+
+<!-- events starts -->
+<section class="events" style="margin-top:100px">
+    <div class="container">
+        <div class="row mb-5">
+            @foreach (var item in events)
+            {
+                <div class="col-lg-4">
+                    <div class="image">
+                        <a href="">
+                            <img src="@item.EventImg" alt="">
+                        </a>
+                    </div>
+                    <div class="inner mt-3 mb-4">
+                        <div class="row" style="margin-left:0px;">
+                            <div class="col-3">
+                                <div class="date">
+                                    @item.DayLeft
+                                    <span>days left</span>
+                                </div>
+
+                            </div>
+                            <div class="col-9">
+                                <a href="">
+                                    <h5>@item.EventName</h5>
+                                </a>
+                                <p style="font-size: 13px;color: #616060;">
+                                    @item.Info
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            }
+        </div>
+
+    </div>
+</section>
+
+<!-- events ends -->

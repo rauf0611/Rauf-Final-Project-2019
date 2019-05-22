@@ -1,0 +1,274 @@
+﻿@using AsianRest.Models
+@{ 
+    AsianRestEntities db = new AsianRestEntities();
+    string actionName = ViewContext.RouteData.Values["action"].ToString().ToLower();
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link href="~/Public/carousel/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/Public/carousel/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="~/Public/css/style.css" rel="stylesheet" />
+    <link href="~/Public/css/style2.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito|ZCOOL+XiaoWei" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Indie+Flower|Nanum+Gothic" rel="stylesheet">
+</head>
+<body>
+    <!-- preloader -->
+    <!-- HelloPreload http://hello-site.ru/preloader/ -->
+    <style type="text/css">
+        #hellopreloader > p {
+            display: none;
+        }
+
+        #hellopreloader_preload {
+            display: block;
+            position: fixed;
+            z-index: 99999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            min-width: 1000px;
+            background: black url(http://hello-site.ru//main/images/preloads/audio.svg) center center no-repeat;
+            background-size: 41px;
+        }
+    </style>
+    <div id="hellopreloader">
+        <div id="hellopreloader_preload"></div>
+        <p><a href="http://hello-site.ru">Hello-Site.ru. Бесплатный конструктор сайтов.</a></p>
+    </div>
+    <script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload"); function fadeOutnojquery(el) { el.style.opacity = 1; var interhellopreloader = setInterval(function () { el.style.opacity = el.style.opacity - 0.05; if (el.style.opacity <= 0.05) { clearInterval(interhellopreloader); hellopreloader.style.display = "none"; } }, 16); } window.onload = function () { setTimeout(function () { fadeOutnojquery(hellopreloader); }, 1000); };</script>
+    <!-- HelloPreload http://hello-site.ru/preloader/ -->
+    <!-- preloader -->
+
+    <header class="@(actionName=="index" ? "indexHeader" : "")">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <a class="navbar-brand" href="/">
+                    <img src="http://monde.elitelayers.com/html/images/logo.png" alt="">
+                </a>
+                <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                About Us
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/home/AboutUs">About Us</a>
+                                <a class="dropdown-item" href="/home/Menu">Menu</a>
+                                <a class="dropdown-item" href="/home/OurChefs">Our Chef</a>
+                                <a class="dropdown-item" href="/home/Events">Events</a>
+                                <a class="dropdown-item" href="/home/Locations">Location</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/home/reservation" role="button" aria-haspopup="true"
+                               aria-expanded="false">
+                                Reservation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/home/Gallery" role="button" aria-haspopup="true"
+                               aria-expanded="false">
+                                Gallery
+                            </a>
+
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/home/Menu" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">
+                                Shop
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/home/ShopNow">Shop Now</a>
+                                <a class="dropdown-item" href="/home/ShopSingle">Shop Single</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="/home/Blog" role="button" aria-haspopup="true"
+                               aria-expanded="false">
+                                Blog
+                            </a>
+
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link " href="/home/ContactUs" role="button" aria-haspopup="true"
+                               aria-expanded="false">
+                                Contact Us
+                            </a>
+                        </li>
+                        @if (Session["UserLog"] as User != null)
+                        {
+                            User logUser = Session["UserLog"] as User;
+                            <li class="nav-item ">
+                                <a class="nav-link " href="/Home/Logout" role="button" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    Logout
+                                </a>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item ">
+                                <a class="nav-link " href="/Home/Login" role="button" aria-haspopup="true"
+                                   aria-expanded="false">
+                                    Login
+                                </a>
+                            </li>
+                        }
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/home/Basket">
+                                <i class="fas fa-shopping-basket">
+                                </i>
+                                @if (Session["order"] != null)
+                                {
+                                    var orderList = Session["order"] as List<MainMenu>;
+                                    int orderCount = orderList.Count();
+                                    <span class='badge badge-warning' id='lblCartCount'>@orderCount</span>
+                                }
+                                else
+                                {
+                                    <span class='badge badge-warning' id='lblCartCount'>0</span>
+                                }
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+            @if (actionName == "index")
+            {
+                <div class="row">
+                    <div class="col-12 header-text">
+                        <p class="text-center">authentic restaraunt</p>
+                        <h2 class="text-center">Monde World</h2>
+                        <h6 class="text-center">55 Angelica Street — New York, NY</h6>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="row">
+                    <div class="col-12 header-text">
+                        <h2 class="text-center" style="margin-top:170px;">@ViewBag.Title</h2>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+    </header>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12  d-flex align-items-end flex-column" style="background:transparent;">
+                <span id="myBtn" title="Go to top"></span>
+            </div>
+        </div>
+
+    </div>
+
+    @RenderBody()
+
+
+
+
+    <footer style=" background-color: #171717;color:white;">
+        <div class="container">
+            <div style="padding-top:70px;" class="row text-center">
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>contact</h6>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                @foreach (var item in db.Contacts.ToList())
+                                {
+                                    @item.AdressName <br>
+                                }
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="col-12">
+                        <img src="http://monde.elitelayers.com/html/images/logo.png" alt="">
+                    </div>
+                    <div class="col-12 mt-3">
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <h6>hours</h6>
+                        </div>
+                        <div class="col-12">
+                            <p>
+                                @foreach (var item in db.WorkHours.ToList())
+                                {
+                                    @item.WorkHour1 <br>
+                                }
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <p class="mt-5" style="font-size:14px">
+                        Copyright © Monde 2017. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    @RenderSection("scripts", required: false)
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="~/Public/carousel/owl.carousel.min.js"></script>
+    <script src="~/Public/js/alert.js"></script>
+    <script src="~/Public/js/script.js"></script>
+    @if (TempData["logSuccess"] != null)
+    {
+        User logUser = Session["UserLog"] as User;
+        <script>
+        swal("Success!", "Welcome dear  @(logUser.FullName)", "success");
+        </script>
+    }
+</body>
+</html>

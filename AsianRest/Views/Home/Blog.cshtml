@@ -1,0 +1,57 @@
+﻿@using AsianRest.Models
+@{
+    ViewBag.Title = "Blog";
+    AsianRestEntities db = new AsianRestEntities();
+    var blogs = db.Blogs.ToList();
+}
+
+<section class="also-like shop-now">
+    <div class="container">
+        <div class="row text-center" style="margin-top:100px;">
+            @foreach (var item in blogs)
+            {
+                <div class="col-lg-4 mt-4 mb-5">
+
+                    <div class="col-12" style="padding-left:0px;padding-right:0px;">
+
+                        <img src="@item.BlogImg" alt="">
+
+                    </div>
+                    <div class="col-12 mt-3">
+                        <a href="">
+                            <h4>@item.BlogName</h4>
+                        </a>
+
+                    </div>
+                    <div class="col-12 mt-3 post-date mt-2">
+                        <a href="">
+                           @item.BlogTime
+                        </a>
+
+
+                    </div>
+                    <div class="col-12 receipt-text mt-4">
+                      @item.BlogInfo
+                    </div>
+                    <div class="col-12 mt-5 ">
+                        <a class="read-more" href="">Read More</a>
+                    </div>
+
+                </div>
+
+            }
+
+            @*<div class="col-lg-12 activePage  text-center mt-5">
+            <a class="activeCount" href="">1</a>
+            <a class="" href="">2</a>
+            <p class="text-right ">
+                PAGE 1 OF 2
+            </p>
+
+        </div>*@
+
+        </div>
+    </div>
+
+</section>
+

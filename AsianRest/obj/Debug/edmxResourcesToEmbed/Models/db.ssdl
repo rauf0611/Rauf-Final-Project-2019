@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AdminLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="20" />
+    <Property Name="password" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Blog">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BlogName" Type="nvarchar" MaxLength="100" />
+    <Property Name="BlogTime" Type="nvarchar" MaxLength="150" />
+    <Property Name="BlogInfo" Type="nvarchar" MaxLength="150" />
+    <Property Name="BlogImg" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Chefs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Profilimg" Type="nvarchar" MaxLength="150" />
+    <Property Name="Position" Type="nvarchar" MaxLength="100" />
+    <Property Name="Info" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="CocktailCard">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MealName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Price" Type="nvarchar" MaxLength="40" />
+    <Property Name="Info" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdressName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Events">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EventName" Type="nvarchar" MaxLength="100" />
+    <Property Name="EventImg" Type="nvarchar" MaxLength="150" />
+    <Property Name="DayLeft" Type="nvarchar" MaxLength="100" />
+    <Property Name="Info" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="Locations">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LocCity" Type="nvarchar" MaxLength="100" />
+    <Property Name="LocAddres" Type="nvarchar" MaxLength="150" />
+    <Property Name="LocPhone" Type="nvarchar" MaxLength="100" />
+    <Property Name="LocWorkHours" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MainMenu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MealName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Price" Type="nvarchar" MaxLength="40" />
+    <Property Name="Info" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Reservation">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReservationDay" Type="date" />
+    <Property Name="Reservation" Type="time" Precision="7" />
+    <Property Name="Personal" Type="int" />
+  </EntityType>
+  <EntityType Name="ShopNow">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MealName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Price" Type="nvarchar" MaxLength="40" />
+    <Property Name="Img" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="UserPassword" Type="nvarchar" MaxLength="255" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="WorkHours">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkHour" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="dbModelStoreContainer">
+    <EntitySet Name="AdminLog" EntityType="Self.AdminLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Blog" EntityType="Self.Blog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Chefs" EntityType="Self.Chefs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CocktailCard" EntityType="Self.CocktailCard" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Events" EntityType="Self.Events" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Locations" EntityType="Self.Locations" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MainMenu" EntityType="Self.MainMenu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reservation" EntityType="Self.Reservation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShopNow" EntityType="Self.ShopNow" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkHours" EntityType="Self.WorkHours" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

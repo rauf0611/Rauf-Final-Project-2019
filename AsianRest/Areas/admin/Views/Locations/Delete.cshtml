@@ -1,0 +1,57 @@
+﻿@model AsianRest.Models.Location
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Location</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LocCity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocCity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocAddres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocAddres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LocWorkHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LocWorkHours)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

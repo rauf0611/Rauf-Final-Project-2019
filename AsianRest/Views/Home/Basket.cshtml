@@ -1,0 +1,46 @@
+﻿@using AsianRest.Models
+@{
+    var orderList = new List<MainMenu>();
+    if (Session["order"] != null)
+    {
+        orderList = Session["order"] as List<MainMenu>;
+    }
+    ViewBag.Title = "Basket";
+}
+
+<div id="basket">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12  mx-auto mt-5 mb-5">
+                <div class="list-group">
+                    @if(orderList!=null)
+                    {
+                       foreach(var item in orderList)
+                        {
+                    <div href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between  align-items-center">
+                            <img src="http://monde.elitelayers.com/html/images/gallery/12.jpg" style="width: 100px;height: 100px;" alt="">
+                            <h6 style="font-family: 'Indie Flower', cursive;font-size: 1.3em; display:inline">
+                                @item.MealName<span class="ml-3">@item.Price</span>
+                            </h6>
+                            <small>
+                                
+                                <a href="/home/removeCard/@item.ID">
+                                    <i  title="Remove" class="far fa-times-circle">  </i>
+                                </a>
+                            </small>
+                        </div>
+
+                    </div>
+
+                        }
+                    }
+                    <button type="submit" class="btn btn-primary mt-4">Checkout</button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>

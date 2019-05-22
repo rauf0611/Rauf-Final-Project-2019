@@ -1,0 +1,48 @@
+﻿@using AsianRest.Models
+@{
+    ViewBag.Title = "Shop Now";
+    AsianRestEntities db = new AsianRestEntities();
+    var shops = db.ShopNows.ToList();
+
+}
+
+
+<section class="also-like shop-now">
+    <div class="container">
+        <div class="row text-center mb-5" style="margin-top:100px;">
+            @foreach (var item in shops)
+            {
+                <div class="col-lg-4 mt-4">
+
+                    <div class="col-12" style="padding-left:0px;padding-right:0px;">
+                        <div class="layout">
+                            <button class="addBtn">
+                                add to card
+                            </button>
+                        </div>
+                        <img src="@item.Img" alt="">
+
+                    </div>
+                    <div class="col-12 mt-3">
+                        <a href="">
+                            <h4>@item.MealName</h4>
+                        </a>
+
+                    </div>
+                    <div class="col-12 mt-3">
+                        <a href="">
+                            <span>
+                                @item.Price
+                            </span>
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            }
+        </div>
+    </div>
+
+</section>

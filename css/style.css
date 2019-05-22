@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* peloader */
+
+
+  /* peloader */
+
+body{
+    height:auto;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+   color: black
+}
+
+/* Scroll to top */
+#myBtn {
+    position: fixed;    
+    bottom: 30px;   
+    background: transparent url("https://nejcslovnik.com/wp-content/uploads/2015/06/scroll-top.png") no-repeat left top;  
+    background-size: cover;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    cursor: pointer;
+    display:none;
+    z-index: 5;
+  }
+  
+ 
+
+/* --------------HEADER */
+header{
+    width: 100%;
+    height: 830px;
+    background-image: url('http://monde.elitelayers.com/html/images/main-slider/image-1.jpg');
+    background-size: cover;
+
+}
+.navbar{
+    background: transparent !important;
+}
+.dropdown{
+    padding-right: 5px;
+}
+
+.nav-link{
+    color: white !important;
+    font-family: 'Nunito', sans-serif;    
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: block;
+    padding: 10px 0px;
+    font-size: 11.5px;
+    /* line-height: 30px; */
+    font-weight: 700;
+    opacity: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -webkit-transition: all 500ms ease;    
+    
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    background-color: rgb(87, 25, 25);
+}
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: .25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    border-top: 1px solid brown;
+    color: #fff;
+    transition:all 0.3s linear ; 
+
+
+}
+.dropdown-item:hover{
+    background-color: white ;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+}
+.nav-item i{
+    font-size: 1.5em;
+}
+
+
+/* basket */
+
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+  }
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605;
+  }
+  #lblCartCount {
+      font-size: 12px;
+      background: #ff0000;
+      color: #fff;
+      padding: 0 5px;
+      vertical-align: top;
+      margin-left: -10px; 
+  }
+
+/* basket */
+
+.dropdown-toggle::after{
+    display: none;
+}
+
+.header-text p{
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 4px !important;
+    margin-top: 240px;
+    
+}
+
+.header-text h2 {
+    font-size: 75px;
+    color: #ffffff;
+    font-weight: 700;
+    line-height: 1.3em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
+}
+
+
+.header-text h6{
+    font-family: 'Conv_georgia';
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+/* HEADER-------------- */
+
+/* SECTION Unique */
+.firsth-section{
+    margin-top: 130px;
+}
+.firsth-section h1{
+font-weight: bold;
+letter-spacing: 3px;
+margin-bottom: 50px;
+
+}
+.firsth-section .unique-text{
+   
+    /* padding:0px 250px; */
+
+}
+.firsth-section .unique-name{
+    
+    margin-top: 10px;
+    font-family: 'Mr De Haviland', cursive;
+    font-size: 1.5em;
+    
+}
+
+/* SECTION unique*/
+
+/* SECTION photo-menu*/
+.menu-image1 img{
+    width: 100%;
+    transition: all 0.4s linear ;
+    
+
+}
+.menu-image1{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+.layout{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    transition: all 0.2s linear ;
+  
+}
+.layout span{
+    color: white;
+    margin:15px 15px;
+    display: inline-block;
+    font-size: 19px;
+    text-transform: uppercase;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    letter-spacing: 3px;
+    
+    
+}
+.menu-image1:hover .layout{
+    background: rgba(0,0,0,0.5);
+    
+}
+.menu-image1:hover img{
+    transform: scale(1.4) rotate(-15deg);
+
+}
+/* SECTION photo-menu */
+
+/* SECTION MENU  */
+
+
+
+/* -------------------- */
+
+
+
+/* SECTION Menu */
+
+
+/* Enjoy together starts */
+.enjoy-together{
+    background-image: url('http://monde.elitelayers.com/html/images/background/2.jpg');
+    margin-top: 150px;
+    width: 100%;
+    height: 530px;
+   
+    background-size: cover;
+    position: relative;
+    
+
+}
+
+
+/* Enjoy together  ends*/
+
+/* <!-- SECTION Testiominal starts */
+.testimonial{
+    margin-top: 100px;
+    width: 100%;
+    height: 500px;
+    position: relative;
+    background-size: cover;
+    background: url('http://monde.elitelayers.com/html/images/background/3.jpg')
+}
+
+/* <!-- SECTION Testiominal ends --> */
+.information{
+    margin-top: 50px;
+}
+
+
+/* Gift-Unique section starts */
+
+.gift-unique{
+    margin-top: 100px;
+    height: 500px;
+    position: relative;    
+    background: black;
+    color: white;
+}
+
+
+
+/* Gift-Unique section ends */
+
+
+
+/* Responsive--------------------- */
+/* Responsive--------------------- */
+
+@media (max-width: 576px) { 
+
+    /* HEADER RESPONSIVE */
+    header{
+        /* height: 700px; */
+    }
+.header-text p{
+    font-size: 15px ;
+    margin-top: 150px;
+}
+.header-text h2{
+    font-size: 35px ;
+}
+.header-text h6{
+    font-size: 10px ;
+}
+
+/* section unique */
+.photo-menu .tho{
+    margin-top: 45px !important;
+}
+/* section unique ends*/
+
+
+
+.enjoy-together .text h1{
+font-size: 50px !important;
+}
+
+
+
+/* information section starts */
+
+
+
+
+
+/* information section ends */
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER RESPONSIVE */
+ }
+
+ /* // Medium devices (tablets, 768px and up) */
+ @media (max-width: 768px) {
+
+
+ }
+ 
+ /* // Large devices (desktops, 992px and up) */
+ @media (max-width: 992px) {
+
+ }
+ 
+ /* // Extra large devices (large desktops, 1200px and up) */
+ @media (max-width: 1200px) {
+
+ }
+/* Responsive--------------------- */
+/* Responsive--------------------- */
+

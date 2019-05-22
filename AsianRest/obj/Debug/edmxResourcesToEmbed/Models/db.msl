@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbModelStoreContainer" CdmEntityContainer="AsianRestEntities">
+    <EntitySetMapping Name="Blogs">
+      <EntityTypeMapping TypeName="dbModel.Blog">
+        <MappingFragment StoreEntitySet="Blog">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="BlogName" ColumnName="BlogName" />
+          <ScalarProperty Name="BlogTime" ColumnName="BlogTime" />
+          <ScalarProperty Name="BlogInfo" ColumnName="BlogInfo" />
+          <ScalarProperty Name="BlogImg" ColumnName="BlogImg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Chefs">
+      <EntityTypeMapping TypeName="dbModel.Chef">
+        <MappingFragment StoreEntitySet="Chefs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Profilimg" ColumnName="Profilimg" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CocktailCards">
+      <EntityTypeMapping TypeName="dbModel.CocktailCard">
+        <MappingFragment StoreEntitySet="CocktailCard">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MealName" ColumnName="MealName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Contacts">
+      <EntityTypeMapping TypeName="dbModel.Contact">
+        <MappingFragment StoreEntitySet="Contact">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="AdressName" ColumnName="AdressName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="dbModel.Event">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+          <ScalarProperty Name="EventImg" ColumnName="EventImg" />
+          <ScalarProperty Name="DayLeft" ColumnName="DayLeft" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Locations">
+      <EntityTypeMapping TypeName="dbModel.Location">
+        <MappingFragment StoreEntitySet="Locations">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="LocCity" ColumnName="LocCity" />
+          <ScalarProperty Name="LocAddres" ColumnName="LocAddres" />
+          <ScalarProperty Name="LocPhone" ColumnName="LocPhone" />
+          <ScalarProperty Name="LocWorkHours" ColumnName="LocWorkHours" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MainMenus">
+      <EntityTypeMapping TypeName="dbModel.MainMenu">
+        <MappingFragment StoreEntitySet="MainMenu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MealName" ColumnName="MealName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Info" ColumnName="Info" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reservations">
+      <EntityTypeMapping TypeName="dbModel.Reservation">
+        <MappingFragment StoreEntitySet="Reservation">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ReservationDay" ColumnName="ReservationDay" />
+          <ScalarProperty Name="Reservation1" ColumnName="Reservation" />
+          <ScalarProperty Name="Personal" ColumnName="Personal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShopNows">
+      <EntityTypeMapping TypeName="dbModel.ShopNow">
+        <MappingFragment StoreEntitySet="ShopNow">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MealName" ColumnName="MealName" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="dbModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkHours">
+      <EntityTypeMapping TypeName="dbModel.WorkHour">
+        <MappingFragment StoreEntitySet="WorkHours">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="WorkHour1" ColumnName="WorkHour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AdminLogs">
+      <EntityTypeMapping TypeName="dbModel.AdminLog">
+        <MappingFragment StoreEntitySet="AdminLog">
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
